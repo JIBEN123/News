@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A976A1DA1BAB12BC00285CCF /* HXMainViewController.m */; };
+		A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A976A1DB1BAB12BC00285CCF /* HXMainViewController.xib */; };
+		A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A976A1DF1BAB12F200285CCF /* HXNavigationController.m */; };
 		A994CBA61BA6E65800A39A71 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A994CBA51BA6E65800A39A71 /* Images.xcassets */; };
 		A994CBA91BA6E65800A39A71 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A994CBA71BA6E65800A39A71 /* LaunchScreen.xib */; };
 		A994CBB51BA6E65800A39A71 /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A994CBB41BA6E65800A39A71 /* NewsTests.m */; };
@@ -28,6 +31,11 @@
 /* Begin PBXFileReference section */
 		277C19C96A9B1DA27D05AA61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		50BC2499DB49A48ADA4106DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A976A1D91BAB12BC00285CCF /* HXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMainViewController.h; sourceTree = "<group>"; };
+		A976A1DA1BAB12BC00285CCF /* HXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMainViewController.m; sourceTree = "<group>"; };
+		A976A1DB1BAB12BC00285CCF /* HXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMainViewController.xib; sourceTree = "<group>"; };
+		A976A1DE1BAB12F200285CCF /* HXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNavigationController.h; sourceTree = "<group>"; };
+		A976A1DF1BAB12F200285CCF /* HXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNavigationController.m; sourceTree = "<group>"; };
 		A994CB951BA6E65800A39A71 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A994CB991BA6E65800A39A71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A994CBA51BA6E65800A39A71 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -60,6 +68,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A976A1D51BAB11F500285CCF /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A976A1D61BAB11F500285CCF /* Controller */,
+				A976A1D71BAB11F500285CCF /* Model */,
+				A976A1D81BAB11F500285CCF /* View */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		A976A1D61BAB11F500285CCF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A976A1D91BAB12BC00285CCF /* HXMainViewController.h */,
+				A976A1DA1BAB12BC00285CCF /* HXMainViewController.m */,
+				A976A1DB1BAB12BC00285CCF /* HXMainViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A976A1D71BAB11F500285CCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A976A1D81BAB11F500285CCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A994CB8C1BA6E65800A39A71 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +161,7 @@
 		A994CBBE1BA6E73B00A39A71 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A976A1D51BAB11F500285CCF /* News */,
 				A994CBBF1BA6E73B00A39A71 /* Main */,
 			);
 			path = Classes;
@@ -136,6 +179,8 @@
 		A994CBC01BA6E73B00A39A71 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A976A1DE1BAB12F200285CCF /* HXNavigationController.h */,
+				A976A1DF1BAB12F200285CCF /* HXNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +258,7 @@
 		A994CB8D1BA6E65800A39A71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HX;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = huangx;
 				TargetAttributes = {
@@ -251,6 +297,7 @@
 			files = (
 				A994CBA91BA6E65800A39A71 /* LaunchScreen.xib in Resources */,
 				A994CBA61BA6E65800A39A71 /* Images.xcassets in Resources */,
+				A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +349,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A994CBC61BA6E73B00A39A71 /* main.m in Sources */,
+				A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */,
 				A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */,
+				A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

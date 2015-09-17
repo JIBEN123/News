@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "HXNavigationController.h"
+#import "HXMainViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    HXMainViewController *mainVc = [[HXMainViewController alloc] init];
+    HXNavigationController *nav = [[HXNavigationController alloc] initWithRootViewController:mainVc];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
