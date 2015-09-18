@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9283ADA1BAC01FB002A6446 /* HXReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9283AD91BAC01FB002A6446 /* HXReplyViewController.m */; };
+		A9283ADD1BAC02CB002A6446 /* HXReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9283ADC1BAC02CB002A6446 /* HXReplyCell.m */; };
+		A9283AE01BAC04FF002A6446 /* HXReplyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9283ADF1BAC04FF002A6446 /* HXReplyHeader.m */; };
+		A9283AE21BAC050F002A6446 /* HXReplyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9283AE11BAC050F002A6446 /* HXReplyHeader.xib */; };
 		A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A976A1DA1BAB12BC00285CCF /* HXMainViewController.m */; };
 		A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A976A1DB1BAB12BC00285CCF /* HXMainViewController.xib */; };
 		A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A976A1DF1BAB12F200285CCF /* HXNavigationController.m */; };
@@ -50,6 +54,13 @@
 /* Begin PBXFileReference section */
 		277C19C96A9B1DA27D05AA61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		50BC2499DB49A48ADA4106DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9283AD81BAC01FB002A6446 /* HXReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReplyViewController.h; sourceTree = "<group>"; };
+		A9283AD91BAC01FB002A6446 /* HXReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReplyViewController.m; sourceTree = "<group>"; };
+		A9283ADB1BAC02CB002A6446 /* HXReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReplyCell.h; sourceTree = "<group>"; };
+		A9283ADC1BAC02CB002A6446 /* HXReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReplyCell.m; sourceTree = "<group>"; };
+		A9283ADE1BAC04FF002A6446 /* HXReplyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReplyHeader.h; sourceTree = "<group>"; };
+		A9283ADF1BAC04FF002A6446 /* HXReplyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReplyHeader.m; sourceTree = "<group>"; };
+		A9283AE11BAC050F002A6446 /* HXReplyHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXReplyHeader.xib; sourceTree = "<group>"; };
 		A976A1D91BAB12BC00285CCF /* HXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXMainViewController.h; sourceTree = "<group>"; };
 		A976A1DA1BAB12BC00285CCF /* HXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXMainViewController.m; sourceTree = "<group>"; };
 		A976A1DB1BAB12BC00285CCF /* HXMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HXMainViewController.xib; sourceTree = "<group>"; };
@@ -309,6 +320,8 @@
 			children = (
 				A9D847481BABE4F200707C62 /* HXDetailController.h */,
 				A9D847491BABE4F200707C62 /* HXDetailController.m */,
+				A9283AD81BAC01FB002A6446 /* HXReplyViewController.h */,
+				A9283AD91BAC01FB002A6446 /* HXReplyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,6 +342,11 @@
 		A9D847471BABE4D600707C62 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9283ADB1BAC02CB002A6446 /* HXReplyCell.h */,
+				A9283ADC1BAC02CB002A6446 /* HXReplyCell.m */,
+				A9283ADE1BAC04FF002A6446 /* HXReplyHeader.h */,
+				A9283ADF1BAC04FF002A6446 /* HXReplyHeader.m */,
+				A9283AE11BAC050F002A6446 /* HXReplyHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,6 +495,7 @@
 				A9D847581BABEA7000707C62 /* SXDetails.css in Resources */,
 				A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */,
 				A9D846A31BAB9B8E00707C62 /* NewsURLs.plist in Resources */,
+				A9283AE21BAC050F002A6446 /* HXReplyHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,14 +551,17 @@
 				A9D846AD1BAB9E8A00707C62 /* HXTableViewController.m in Sources */,
 				A9D846A11BAB9A5400707C62 /* HXTitleLabel.m in Sources */,
 				A9D847401BABE1F300707C62 /* HXNewsCell.m in Sources */,
+				A9283AE01BAC04FF002A6446 /* HXReplyHeader.m in Sources */,
 				A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */,
 				A9D847531BABE73B00707C62 /* HXDetailImgModel.m in Sources */,
 				A9D8474A1BABE4F200707C62 /* HXDetailController.m in Sources */,
+				A9283ADD1BAC02CB002A6446 /* HXReplyCell.m in Sources */,
 				A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */,
 				A9D847501BABE6C300707C62 /* HXHTTPManager.m in Sources */,
 				A9D847391BABDEA700707C62 /* HXNewsModel.m in Sources */,
 				A9D847671BABF7DD00707C62 /* HXPhotosDetail.m in Sources */,
 				A9D847611BABF6EF00707C62 /* HXPhotoSetController.m in Sources */,
+				A9283ADA1BAC01FB002A6446 /* HXReplyViewController.m in Sources */,
 				A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */,
 				A9D8476A1BAC00A800707C62 /* MJExtensionConfig.m in Sources */,
 				A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */,

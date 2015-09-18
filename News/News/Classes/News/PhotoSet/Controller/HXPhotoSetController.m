@@ -15,6 +15,7 @@
 #import "UIImageView+WebCache.h"
 #import "MJExtension.h"
 #import "HXPhotosDetail.h"
+#import "HXReplyViewController.h"
 
 @interface HXPhotoSetController ()
 
@@ -228,11 +229,11 @@
     
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    SXReplyViewController *replyvc = segue.destinationViewController;
-//    replyvc.replys = self.replyModels;
-//}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    HXReplyViewController *replyvc = segue.destinationViewController;
+    replyvc.replys = self.replyModels;
+}
 
 
 

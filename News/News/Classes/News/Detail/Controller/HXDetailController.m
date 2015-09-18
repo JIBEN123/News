@@ -12,6 +12,7 @@
 #import "HXHTTPManager.h"
 #import "HXReplyModel.h"
 #import "HXDetailImgModel.h"
+#import "HXReplyViewController.h"
 
 @interface HXDetailController () <UIWebViewDelegate>
 
@@ -226,18 +227,18 @@
 }
 
 #pragma mark - ******************** 即将跳转时
-#warning 跳转到回复
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    SXReplyViewController *replyvc = segue.destinationViewController;
-//    replyvc.replys = self.replyModels;
-//    
-//    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-//        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-//    }
-//    
-//    [[NSNotificationCenter defaultCenter]postNotification:[NSNotification notificationWithName:@"contentStart" object:nil]];
-//}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    HXReplyViewController *replyvc = segue.destinationViewController;
+    replyvc.replys = self.replyModels;
+    
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
+    
+    [[NSNotificationCenter defaultCenter]postNotification:[NSNotification notificationWithName:@"contentStart" object:nil]];
+}
 
 
 - (void)dealloc
