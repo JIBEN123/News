@@ -62,17 +62,28 @@
 #warning 天气
     UIButton *rightItem = [[UIButton alloc]init];
     self.rightItem = rightItem;
-    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
-    [win addSubview:rightItem];
-    rightItem.y = 20;
-    rightItem.width = 45;
+//    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
+//    [win addSubview:rightItem];
+//    rightItem.y = 20;
+    rightItem.width = 20;
     rightItem.height = 45;
     [rightItem addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
-    rightItem.x = [UIScreen mainScreen].bounds.size.width - rightItem.width;
+//    rightItem.x = [UIScreen mainScreen].bounds.size.width - rightItem.width;
     NSLog(@"%@",NSStringFromCGRect(rightItem.frame));
     [rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
 
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightItem];
 //    [self sendWeatherRequest];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)dealloc
+{
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

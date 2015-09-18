@@ -52,6 +52,13 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+#pragma mark - 导航栏
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}
+
 #pragma mark - ******************** 首次加载
 - (void)viewDidLoad {
     [super viewDidLoad];
