@@ -451,7 +451,7 @@
 		A994CB8D1BA6E65800A39A71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = HX;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = huangx;
 				TargetAttributes = {
