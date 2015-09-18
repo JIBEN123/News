@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="80" id="iEg-tg-lsu" customClass="SXNewsCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="80" id="iEg-tg-lsu" customClass="HXNewsCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iEg-tg-lsu" id="NPl-Mj-ZBk">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -94,7 +94,7 @@
                                     <segue destination="AGK-Ys-EEq" kind="show" id="2uJ-wj-MSP"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesCell" rowHeight="130" id="y9L-c3-hpy" customClass="SXNewsCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagesCell" rowHeight="130" id="y9L-c3-hpy" customClass="HXNewsCell">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y9L-c3-hpy" id="Se5-2D-y2E">
@@ -169,7 +169,7 @@
                                     <segue destination="lfx-tz-RHK" kind="show" id="taV-i8-kFc"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BigImageCell" rowHeight="170" id="VOS-Lr-xSz" customClass="SXNewsCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BigImageCell" rowHeight="170" id="VOS-Lr-xSz" customClass="HXNewsCell">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOS-Lr-xSz" id="SYT-wf-DIy">
@@ -219,7 +219,7 @@
                                     <segue destination="AGK-Ys-EEq" kind="show" id="azu-K6-x3y"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopImageCell" rowHeight="245" id="nDs-Tx-EfH" customClass="SXNewsCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopImageCell" rowHeight="245" id="nDs-Tx-EfH" customClass="HXNewsCell">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDs-Tx-EfH" id="4Xr-5h-Mzi">
@@ -285,7 +285,7 @@
                                     <segue destination="lfx-tz-RHK" kind="show" id="rhD-LA-CtI"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopTxtCell" rowHeight="245" id="IC2-iZ-vKl" customClass="SXNewsCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopTxtCell" rowHeight="245" id="IC2-iZ-vKl" customClass="HXNewsCell">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IC2-iZ-vKl" id="RJc-xV-yuo">
@@ -642,7 +642,7 @@
         <!--新闻详情-->
         <scene sceneID="RC0-Cc-OkJ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="AGK-Ys-EEq" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="AGK-Ys-EEq" customClass="HXDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QGQ-K1-5xM"/>
                         <viewControllerLayoutGuide type="bottom" id="X81-OH-VM3"/>
@@ -667,6 +667,9 @@
                                         <state key="normal" backgroundImage="night_icon_back">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backBtn:" destination="AGK-Ys-EEq" eventType="touchUpInside" id="rjH-uE-UlL"/>
+                                        </connections>
                                     </button>
                                     <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaR-if-e2b">
                                         <rect key="frame" x="0.0" y="53" width="375" height="1"/>
@@ -720,6 +723,11 @@
                     <navigationItem key="navigationItem" title="新闻详情" id="TYY-CD-yZi">
                         <barButtonItem key="rightBarButtonItem" image="002" id="C33-g8-HfC"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backBtn" destination="nQn-TM-cYT" id="mLC-hU-BDA"/>
+                        <outlet property="replyCountBtn" destination="ZPp-e4-Lgf" id="EXi-yc-JTh"/>
+                        <outlet property="webView" destination="dlk-Pz-rJr" id="qYz-Zc-cJL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fee-Cb-3Pb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

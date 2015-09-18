@@ -7,10 +7,11 @@
 //
 
 #import "HXTableViewController.h"
-//#import "SXDetailController.h"
+#import "HXDetailController.h"
 //#import "SXPhotoSetController.h"
-//#import "SXNewsCell.h"
-//#import "SXNetworkTools.h"
+#import "HXNewsCell.h"
+#import "HXNewsModel.h"
+#import "HXNetworkTool.h"
 #import "MJRefresh.h"
 
 #import "MJExtension.h"
@@ -27,84 +28,141 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    self.update = YES;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
+//- (void)setUrlString:(NSString *)urlString
+//{
+//    _urlString = urlString;
+//}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //    NSLog(@"bbbb");
+    if (self.update == YES) {
+        [self.tableView.header beginRefreshing];
+        self.update = NO;
+    }
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"contentStart" object:nil]];
+}
+
+#pragma mark - /************************* 刷新数据 ***************************/
+// ------下拉刷新
+- (void)loadData
+{
+    // http://c.m.163.com//nc/article/headline/T1348647853363/0-30.html
+    NSString *allUrlstring = [NSString stringWithFormat:@"/nc/article/%@/0-20.html",self.urlString];
+    [self loadDataForType:1 withURL:allUrlstring];
+}
+
+// ------上拉加载
+- (void)loadMoreData
+{
+    NSString *allUrlstring = [NSString stringWithFormat:@"/nc/article/%@/%ld-20.html",self.urlString,(self.arrayList.count - self.arrayList.count%10)];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self loadDataForType:2 withURL:allUrlstring];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// ------公共方法
+- (void)loadDataForType:(int)type withURL:(NSString *)allUrlstring
+{
+    [[[HXNetworkTool sharedNetworkTools]GET:allUrlstring parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary* responseObject) {
+        NSLog(@"%@",allUrlstring);
+        NSString *key = [responseObject.keyEnumerator nextObject];
+        
+        NSArray *temArray = responseObject[key];
+        
+        NSMutableArray *arrayM = [HXNewsModel objectArrayWithKeyValuesArray:temArray];
+        
+        if (type == 1) {
+            self.arrayList = arrayM;
+            [self.tableView.header endRefreshing];
+            [self.tableView reloadData];
+        }else if(type == 2){
+            [self.arrayList addObjectsFromArray:arrayM];
+            
+            [self.tableView.footer endRefreshing];
+            [self.tableView reloadData];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error);
+    }] resume];
+}// ------想把这里改成block来着
+
+#pragma mark - /************************* tbv数据源方法 ***************************/
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.arrayList.count;
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HXNewsModel *newsModel = self.arrayList[indexPath.row];
     
-    // Configure the cell...
+    NSString *ID = [HXNewsCell idForRow:newsModel];
+    
+    if ((indexPath.row%20 == 0)&&(indexPath.row != 0)) {
+        ID = @"NewsCell";
+    }
+    
+    HXNewsCell * cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    cell.NewsModel = newsModel;
     
     return cell;
+    
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - /************************* tbv代理方法 ***************************/
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HXNewsModel *newsModel = self.arrayList[indexPath.row];
+    
+    CGFloat rowHeight = [HXNewsCell heightForRow:newsModel];
+    
+    if ((indexPath.row%20 == 0)&&(indexPath.row != 0)) {
+        rowHeight = 80;
+    }
+    
+    return rowHeight;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 刚选中又马上取消选中，格子不变色
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view.backgroundColor = [UIColor yellowColor];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[HXDetailController class]]) {
+        
+        NSInteger x = self.tableView.indexPathForSelectedRow.row;
+        HXDetailController *dc = segue.destinationViewController;
+        dc.newsModel = self.arrayList[x];
+        dc.index = self.index;
+        if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+            self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+        }
+    }
+//    }else{
+//        NSInteger x = self.tableView.indexPathForSelectedRow.row;
+//        SXPhotoSetController *pc = segue.destinationViewController;
+//        pc.newsModel = self.arrayList[x];
+//    }
+    
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

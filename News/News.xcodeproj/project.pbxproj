@@ -20,6 +20,15 @@
 		A9D846A81BAB9CA400707C62 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D846A71BAB9CA400707C62 /* UIView+Extension.m */; };
 		A9D846AA1BAB9E0D00707C62 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D846A91BAB9E0D00707C62 /* News.storyboard */; };
 		A9D846AD1BAB9E8A00707C62 /* HXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D846AC1BAB9E8A00707C62 /* HXTableViewController.m */; };
+		A9D847391BABDEA700707C62 /* HXNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847381BABDEA700707C62 /* HXNewsModel.m */; };
+		A9D8473D1BABE05800707C62 /* HXNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D8473C1BABE05800707C62 /* HXNetworkTool.m */; };
+		A9D847401BABE1F300707C62 /* HXNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D8473F1BABE1F300707C62 /* HXNewsCell.m */; };
+		A9D8474A1BABE4F200707C62 /* HXDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847491BABE4F200707C62 /* HXDetailController.m */; };
+		A9D8474D1BABE5EE00707C62 /* HXDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D8474C1BABE5EE00707C62 /* HXDetailModel.m */; };
+		A9D847501BABE6C300707C62 /* HXHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D8474F1BABE6C300707C62 /* HXHTTPManager.m */; };
+		A9D847531BABE73B00707C62 /* HXDetailImgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847521BABE73B00707C62 /* HXDetailImgModel.m */; };
+		A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847551BABE7CB00707C62 /* HXReplyModel.m */; };
+		A9D847581BABEA7000707C62 /* SXDetails.css in Resources */ = {isa = PBXBuildFile; fileRef = A9D847571BABEA7000707C62 /* SXDetails.css */; };
 		E72B77B31D4F3243B06A7971 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC2499DB49A48ADA4106DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +68,23 @@
 		A9D846A91BAB9E0D00707C62 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		A9D846AB1BAB9E8A00707C62 /* HXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTableViewController.h; sourceTree = "<group>"; };
 		A9D846AC1BAB9E8A00707C62 /* HXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTableViewController.m; sourceTree = "<group>"; };
+		A9D847371BABDEA700707C62 /* HXNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNewsModel.h; sourceTree = "<group>"; };
+		A9D847381BABDEA700707C62 /* HXNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNewsModel.m; sourceTree = "<group>"; };
+		A9D8473B1BABE05800707C62 /* HXNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNetworkTool.h; sourceTree = "<group>"; };
+		A9D8473C1BABE05800707C62 /* HXNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNetworkTool.m; sourceTree = "<group>"; };
+		A9D8473E1BABE1F300707C62 /* HXNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNewsCell.h; sourceTree = "<group>"; };
+		A9D8473F1BABE1F300707C62 /* HXNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXNewsCell.m; sourceTree = "<group>"; };
+		A9D847481BABE4F200707C62 /* HXDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailController.h; sourceTree = "<group>"; };
+		A9D847491BABE4F200707C62 /* HXDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetailController.m; sourceTree = "<group>"; };
+		A9D8474B1BABE5EE00707C62 /* HXDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailModel.h; sourceTree = "<group>"; };
+		A9D8474C1BABE5EE00707C62 /* HXDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetailModel.m; sourceTree = "<group>"; };
+		A9D8474E1BABE6C300707C62 /* HXHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXHTTPManager.h; sourceTree = "<group>"; };
+		A9D8474F1BABE6C300707C62 /* HXHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXHTTPManager.m; sourceTree = "<group>"; };
+		A9D847511BABE73B00707C62 /* HXDetailImgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDetailImgModel.h; sourceTree = "<group>"; };
+		A9D847521BABE73B00707C62 /* HXDetailImgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDetailImgModel.m; sourceTree = "<group>"; };
+		A9D847541BABE7CB00707C62 /* HXReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReplyModel.h; sourceTree = "<group>"; };
+		A9D847551BABE7CB00707C62 /* HXReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReplyModel.m; sourceTree = "<group>"; };
+		A9D847571BABEA7000707C62 /* SXDetails.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = SXDetails.css; sourceTree = "<group>"; };
 		C263CF10F54599BD8AF13381 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +110,8 @@
 		A976A1D51BAB11F500285CCF /* News */ = {
 			isa = PBXGroup;
 			children = (
+				A9D847441BABE4D600707C62 /* Detail */,
+				A9D8473A1BABE03C00707C62 /* Tools */,
 				A976A1D61BAB11F500285CCF /* Controller */,
 				A976A1D71BAB11F500285CCF /* Model */,
 				A976A1D81BAB11F500285CCF /* View */,
@@ -106,6 +134,8 @@
 		A976A1D71BAB11F500285CCF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9D847371BABDEA700707C62 /* HXNewsModel.h */,
+				A9D847381BABDEA700707C62 /* HXNewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +146,8 @@
 				A9D846A91BAB9E0D00707C62 /* News.storyboard */,
 				A9D8469F1BAB9A5400707C62 /* HXTitleLabel.h */,
 				A9D846A01BAB9A5400707C62 /* HXTitleLabel.m */,
+				A9D8473E1BABE1F300707C62 /* HXNewsCell.h */,
+				A9D8473F1BABE1F300707C62 /* HXNewsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +184,7 @@
 		A994CB981BA6E65800A39A71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9D847571BABEA7000707C62 /* SXDetails.css */,
 				A9D846A21BAB9B8E00707C62 /* NewsURLs.plist */,
 				A994CBA51BA6E65800A39A71 /* Images.xcassets */,
 				A994CBA71BA6E65800A39A71 /* LaunchScreen.xib */,
@@ -230,6 +263,56 @@
 				A9D846A71BAB9CA400707C62 /* UIView+Extension.m */,
 			);
 			path = "UIView+Extension";
+			sourceTree = "<group>";
+		};
+		A9D8473A1BABE03C00707C62 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8473B1BABE05800707C62 /* HXNetworkTool.h */,
+				A9D8473C1BABE05800707C62 /* HXNetworkTool.m */,
+				A9D8474E1BABE6C300707C62 /* HXHTTPManager.h */,
+				A9D8474F1BABE6C300707C62 /* HXHTTPManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		A9D847441BABE4D600707C62 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A9D847451BABE4D600707C62 /* Controller */,
+				A9D847461BABE4D600707C62 /* Model */,
+				A9D847471BABE4D600707C62 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		A9D847451BABE4D600707C62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9D847481BABE4F200707C62 /* HXDetailController.h */,
+				A9D847491BABE4F200707C62 /* HXDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A9D847461BABE4D600707C62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8474B1BABE5EE00707C62 /* HXDetailModel.h */,
+				A9D8474C1BABE5EE00707C62 /* HXDetailModel.m */,
+				A9D847511BABE73B00707C62 /* HXDetailImgModel.h */,
+				A9D847521BABE73B00707C62 /* HXDetailImgModel.m */,
+				A9D847541BABE7CB00707C62 /* HXReplyModel.h */,
+				A9D847551BABE7CB00707C62 /* HXReplyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9D847471BABE4D600707C62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D994BA72EFD6DFB8072839E0 /* Pods */ = {
@@ -335,6 +418,7 @@
 				A994CBA91BA6E65800A39A71 /* LaunchScreen.xib in Resources */,
 				A994CBA61BA6E65800A39A71 /* Images.xcassets in Resources */,
 				A9D846AA1BAB9E0D00707C62 /* News.storyboard in Resources */,
+				A9D847581BABEA7000707C62 /* SXDetails.css in Resources */,
 				A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */,
 				A9D846A31BAB9B8E00707C62 /* NewsURLs.plist in Resources */,
 			);
@@ -391,9 +475,17 @@
 				A994CBC61BA6E73B00A39A71 /* main.m in Sources */,
 				A9D846AD1BAB9E8A00707C62 /* HXTableViewController.m in Sources */,
 				A9D846A11BAB9A5400707C62 /* HXTitleLabel.m in Sources */,
+				A9D847401BABE1F300707C62 /* HXNewsCell.m in Sources */,
 				A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */,
+				A9D847531BABE73B00707C62 /* HXDetailImgModel.m in Sources */,
+				A9D8474A1BABE4F200707C62 /* HXDetailController.m in Sources */,
 				A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */,
+				A9D847501BABE6C300707C62 /* HXHTTPManager.m in Sources */,
+				A9D847391BABDEA700707C62 /* HXNewsModel.m in Sources */,
 				A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */,
+				A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */,
+				A9D8474D1BABE5EE00707C62 /* HXDetailModel.m in Sources */,
+				A9D8473D1BABE05800707C62 /* HXNetworkTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
