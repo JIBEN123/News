@@ -8,7 +8,7 @@
 
 #import "HXTableViewController.h"
 #import "HXDetailController.h"
-//#import "SXPhotoSetController.h"
+#import "HXPhotoSetController.h"
 #import "HXNewsCell.h"
 #import "HXNewsModel.h"
 #import "HXNetworkTool.h"
@@ -155,13 +155,12 @@
         if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
             self.navigationController.interactivePopGestureRecognizer.delegate = nil;
         }
+    }else{
+        NSInteger x = self.tableView.indexPathForSelectedRow.row;
+        HXPhotoSetController *pc = segue.destinationViewController;
+        pc.newsModel = self.arrayList[x];
     }
-//    }else{
-//        NSInteger x = self.tableView.indexPathForSelectedRow.row;
-//        SXPhotoSetController *pc = segue.destinationViewController;
-//        pc.newsModel = self.arrayList[x];
-//    }
-    
+
 }
 
 

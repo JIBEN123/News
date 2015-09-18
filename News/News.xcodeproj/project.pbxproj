@@ -30,6 +30,10 @@
 		A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847551BABE7CB00707C62 /* HXReplyModel.m */; };
 		A9D847581BABEA7000707C62 /* SXDetails.css in Resources */ = {isa = PBXBuildFile; fileRef = A9D847571BABEA7000707C62 /* SXDetails.css */; };
 		A9D8475A1BABF5D400707C62 /* HYQiHei-50J.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9D847591BABF1B700707C62 /* HYQiHei-50J.ttf */; };
+		A9D847611BABF6EF00707C62 /* HXPhotoSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847601BABF6EF00707C62 /* HXPhotoSetController.m */; };
+		A9D847641BABF7A900707C62 /* HXPhotoSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847631BABF7A900707C62 /* HXPhotoSet.m */; };
+		A9D847671BABF7DD00707C62 /* HXPhotosDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847661BABF7DD00707C62 /* HXPhotosDetail.m */; };
+		A9D8476A1BAC00A800707C62 /* MJExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847691BAC00A800707C62 /* MJExtensionConfig.m */; };
 		E72B77B31D4F3243B06A7971 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC2499DB49A48ADA4106DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +91,14 @@
 		A9D847551BABE7CB00707C62 /* HXReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReplyModel.m; sourceTree = "<group>"; };
 		A9D847571BABEA7000707C62 /* SXDetails.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = SXDetails.css; sourceTree = "<group>"; };
 		A9D847591BABF1B700707C62 /* HYQiHei-50J.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HYQiHei-50J.ttf"; sourceTree = "<group>"; };
+		A9D8475F1BABF6EF00707C62 /* HXPhotoSetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPhotoSetController.h; sourceTree = "<group>"; };
+		A9D847601BABF6EF00707C62 /* HXPhotoSetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPhotoSetController.m; sourceTree = "<group>"; };
+		A9D847621BABF7A900707C62 /* HXPhotoSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPhotoSet.h; sourceTree = "<group>"; };
+		A9D847631BABF7A900707C62 /* HXPhotoSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPhotoSet.m; sourceTree = "<group>"; };
+		A9D847651BABF7DD00707C62 /* HXPhotosDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPhotosDetail.h; sourceTree = "<group>"; };
+		A9D847661BABF7DD00707C62 /* HXPhotosDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPhotosDetail.m; sourceTree = "<group>"; };
+		A9D847681BAC00A800707C62 /* MJExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConfig.h; sourceTree = "<group>"; };
+		A9D847691BAC00A800707C62 /* MJExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJExtensionConfig.m; sourceTree = "<group>"; };
 		C263CF10F54599BD8AF13381 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +124,7 @@
 		A976A1D51BAB11F500285CCF /* News */ = {
 			isa = PBXGroup;
 			children = (
+				A9D8475B1BABF6BA00707C62 /* PhotoSet */,
 				A9D847441BABE4D600707C62 /* Detail */,
 				A9D8473A1BABE03C00707C62 /* Tools */,
 				A976A1D61BAB11F500285CCF /* Controller */,
@@ -225,6 +238,8 @@
 		A994CBBF1BA6E73B00A39A71 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A9D847681BAC00A800707C62 /* MJExtensionConfig.h */,
+				A9D847691BAC00A800707C62 /* MJExtensionConfig.m */,
 				A9D846A41BAB9C9700707C62 /* Category */,
 				A994CBC01BA6E73B00A39A71 /* Controller */,
 				A994CBC11BA6E73B00A39A71 /* Other */,
@@ -312,6 +327,43 @@
 			sourceTree = "<group>";
 		};
 		A9D847471BABE4D600707C62 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A9D8475B1BABF6BA00707C62 /* PhotoSet */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8475C1BABF6BA00707C62 /* Controller */,
+				A9D8475D1BABF6BA00707C62 /* Model */,
+				A9D8475E1BABF6BA00707C62 /* View */,
+			);
+			path = PhotoSet;
+			sourceTree = "<group>";
+		};
+		A9D8475C1BABF6BA00707C62 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A9D8475F1BABF6EF00707C62 /* HXPhotoSetController.h */,
+				A9D847601BABF6EF00707C62 /* HXPhotoSetController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A9D8475D1BABF6BA00707C62 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9D847621BABF7A900707C62 /* HXPhotoSet.h */,
+				A9D847631BABF7A900707C62 /* HXPhotoSet.m */,
+				A9D847651BABF7DD00707C62 /* HXPhotosDetail.h */,
+				A9D847661BABF7DD00707C62 /* HXPhotosDetail.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9D8475E1BABF6BA00707C62 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -486,9 +538,13 @@
 				A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */,
 				A9D847501BABE6C300707C62 /* HXHTTPManager.m in Sources */,
 				A9D847391BABDEA700707C62 /* HXNewsModel.m in Sources */,
+				A9D847671BABF7DD00707C62 /* HXPhotosDetail.m in Sources */,
+				A9D847611BABF6EF00707C62 /* HXPhotoSetController.m in Sources */,
 				A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */,
+				A9D8476A1BAC00A800707C62 /* MJExtensionConfig.m in Sources */,
 				A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */,
 				A9D8474D1BABE5EE00707C62 /* HXDetailModel.m in Sources */,
+				A9D847641BABF7A900707C62 /* HXPhotoSet.m in Sources */,
 				A9D8473D1BABE05800707C62 /* HXNetworkTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

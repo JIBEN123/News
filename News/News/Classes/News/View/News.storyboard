@@ -372,7 +372,7 @@
         <!--图集-->
         <scene sceneID="9pE-6T-E3a">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="lfx-tz-RHK" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="lfx-tz-RHK" customClass="HXPhotoSetController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7On-M5-J9i"/>
                         <viewControllerLayoutGuide type="bottom" id="D9H-WT-4KQ"/>
@@ -462,6 +462,9 @@
                                 <state key="normal" backgroundImage="weather_back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="backBtnClick:" destination="lfx-tz-RHK" eventType="touchUpInside" id="Cfn-7w-DW3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFR-b5-qK2">
                                 <rect key="frame" x="290" y="25" width="80" height="35"/>
@@ -505,6 +508,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="图集" id="Yx0-1r-5Bg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contentText" destination="oHd-NP-TVD" id="q5W-Gx-423"/>
+                        <outlet property="countLabel" destination="FsF-v2-rX2" id="8PF-O1-Wdk"/>
+                        <outlet property="photoScrollView" destination="LOk-YG-gEv" id="51H-f1-vqg"/>
+                        <outlet property="replayBtn" destination="AFR-b5-qK2" id="cYp-Ma-kVh"/>
+                        <outlet property="titleLabel" destination="aSS-jM-mLl" id="swY-XM-rRU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1Z-n5-YSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -752,6 +762,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="taV-i8-kFc"/>
         <segue reference="2uJ-wj-MSP"/>
-        <segue reference="Kax-d4-jez"/>
+        <segue reference="KzH-9A-Ids"/>
     </inferredMetricsTieBreakers>
 </document>
