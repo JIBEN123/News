@@ -29,6 +29,7 @@
 		A9D847531BABE73B00707C62 /* HXDetailImgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847521BABE73B00707C62 /* HXDetailImgModel.m */; };
 		A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D847551BABE7CB00707C62 /* HXReplyModel.m */; };
 		A9D847581BABEA7000707C62 /* SXDetails.css in Resources */ = {isa = PBXBuildFile; fileRef = A9D847571BABEA7000707C62 /* SXDetails.css */; };
+		A9D8475A1BABF5D400707C62 /* HYQiHei-50J.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9D847591BABF1B700707C62 /* HYQiHei-50J.ttf */; };
 		E72B77B31D4F3243B06A7971 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC2499DB49A48ADA4106DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		A9D847541BABE7CB00707C62 /* HXReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReplyModel.h; sourceTree = "<group>"; };
 		A9D847551BABE7CB00707C62 /* HXReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXReplyModel.m; sourceTree = "<group>"; };
 		A9D847571BABEA7000707C62 /* SXDetails.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = SXDetails.css; sourceTree = "<group>"; };
+		A9D847591BABF1B700707C62 /* HYQiHei-50J.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HYQiHei-50J.ttf"; sourceTree = "<group>"; };
 		C263CF10F54599BD8AF13381 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		A994CB981BA6E65800A39A71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9D847591BABF1B700707C62 /* HYQiHei-50J.ttf */,
 				A9D847571BABEA7000707C62 /* SXDetails.css */,
 				A9D846A21BAB9B8E00707C62 /* NewsURLs.plist */,
 				A994CBA51BA6E65800A39A71 /* Images.xcassets */,
@@ -415,6 +418,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D8475A1BABF5D400707C62 /* HYQiHei-50J.ttf in Resources */,
 				A994CBA91BA6E65800A39A71 /* LaunchScreen.xib in Resources */,
 				A994CBA61BA6E65800A39A71 /* Images.xcassets in Resources */,
 				A9D846AA1BAB9E0D00707C62 /* News.storyboard in Resources */,
