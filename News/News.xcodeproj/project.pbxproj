@@ -15,6 +15,11 @@
 		A994CBB51BA6E65800A39A71 /* NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A994CBB41BA6E65800A39A71 /* NewsTests.m */; };
 		A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A994CBC31BA6E73B00A39A71 /* AppDelegate.m */; };
 		A994CBC61BA6E73B00A39A71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A994CBC41BA6E73B00A39A71 /* main.m */; };
+		A9D846A11BAB9A5400707C62 /* HXTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D846A01BAB9A5400707C62 /* HXTitleLabel.m */; };
+		A9D846A31BAB9B8E00707C62 /* NewsURLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9D846A21BAB9B8E00707C62 /* NewsURLs.plist */; };
+		A9D846A81BAB9CA400707C62 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D846A71BAB9CA400707C62 /* UIView+Extension.m */; };
+		A9D846AA1BAB9E0D00707C62 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D846A91BAB9E0D00707C62 /* News.storyboard */; };
+		A9D846AD1BAB9E8A00707C62 /* HXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D846AC1BAB9E8A00707C62 /* HXTableViewController.m */; };
 		E72B77B31D4F3243B06A7971 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BC2499DB49A48ADA4106DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +51,14 @@
 		A994CBC21BA6E73B00A39A71 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A994CBC31BA6E73B00A39A71 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A994CBC41BA6E73B00A39A71 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9D8469F1BAB9A5400707C62 /* HXTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTitleLabel.h; sourceTree = "<group>"; };
+		A9D846A01BAB9A5400707C62 /* HXTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTitleLabel.m; sourceTree = "<group>"; };
+		A9D846A21BAB9B8E00707C62 /* NewsURLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NewsURLs.plist; sourceTree = "<group>"; };
+		A9D846A61BAB9CA400707C62 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		A9D846A71BAB9CA400707C62 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		A9D846A91BAB9E0D00707C62 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		A9D846AB1BAB9E8A00707C62 /* HXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTableViewController.h; sourceTree = "<group>"; };
+		A9D846AC1BAB9E8A00707C62 /* HXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTableViewController.m; sourceTree = "<group>"; };
 		C263CF10F54599BD8AF13381 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +97,8 @@
 				A976A1D91BAB12BC00285CCF /* HXMainViewController.h */,
 				A976A1DA1BAB12BC00285CCF /* HXMainViewController.m */,
 				A976A1DB1BAB12BC00285CCF /* HXMainViewController.xib */,
+				A9D846AB1BAB9E8A00707C62 /* HXTableViewController.h */,
+				A9D846AC1BAB9E8A00707C62 /* HXTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -98,6 +113,9 @@
 		A976A1D81BAB11F500285CCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9D846A91BAB9E0D00707C62 /* News.storyboard */,
+				A9D8469F1BAB9A5400707C62 /* HXTitleLabel.h */,
+				A9D846A01BAB9A5400707C62 /* HXTitleLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +152,7 @@
 		A994CB981BA6E65800A39A71 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9D846A21BAB9B8E00707C62 /* NewsURLs.plist */,
 				A994CBA51BA6E65800A39A71 /* Images.xcassets */,
 				A994CBA71BA6E65800A39A71 /* LaunchScreen.xib */,
 				A994CB991BA6E65800A39A71 /* Info.plist */,
@@ -170,6 +189,7 @@
 		A994CBBF1BA6E73B00A39A71 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				A9D846A41BAB9C9700707C62 /* Category */,
 				A994CBC01BA6E73B00A39A71 /* Controller */,
 				A994CBC11BA6E73B00A39A71 /* Other */,
 			);
@@ -193,6 +213,23 @@
 				A994CBC41BA6E73B00A39A71 /* main.m */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		A9D846A41BAB9C9700707C62 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A9D846A51BAB9CA400707C62 /* UIView+Extension */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A9D846A51BAB9CA400707C62 /* UIView+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A9D846A61BAB9CA400707C62 /* UIView+Extension.h */,
+				A9D846A71BAB9CA400707C62 /* UIView+Extension.m */,
+			);
+			path = "UIView+Extension";
 			sourceTree = "<group>";
 		};
 		D994BA72EFD6DFB8072839E0 /* Pods */ = {
@@ -297,7 +334,9 @@
 			files = (
 				A994CBA91BA6E65800A39A71 /* LaunchScreen.xib in Resources */,
 				A994CBA61BA6E65800A39A71 /* Images.xcassets in Resources */,
+				A9D846AA1BAB9E0D00707C62 /* News.storyboard in Resources */,
 				A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */,
+				A9D846A31BAB9B8E00707C62 /* NewsURLs.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D846A81BAB9CA400707C62 /* UIView+Extension.m in Sources */,
 				A994CBC61BA6E73B00A39A71 /* main.m in Sources */,
+				A9D846AD1BAB9E8A00707C62 /* HXTableViewController.m in Sources */,
+				A9D846A11BAB9A5400707C62 /* HXTitleLabel.m in Sources */,
 				A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */,
 				A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */,
 				A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */,

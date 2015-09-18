@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HXMainViewController">
             <connections>
+                <outlet property="bigScrollView" destination="QmX-mx-xCp" id="L6Z-16-r8e"/>
+                <outlet property="smallScrollView" destination="kus-UR-ek1" id="Nhp-yM-rwC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,30 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QmX-mx-xCp">
+                    <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kus-UR-ek1">
+                    <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="YDt-lL-2aa"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="QmX-mx-xCp" secondAttribute="trailing" id="0XP-HW-VoZ"/>
+                <constraint firstItem="QmX-mx-xCp" firstAttribute="top" secondItem="kus-UR-ek1" secondAttribute="bottom" id="BXf-We-eIH"/>
+                <constraint firstItem="kus-UR-ek1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Be9-us-Mt6"/>
+                <constraint firstItem="kus-UR-ek1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GHI-Em-zh7"/>
+                <constraint firstItem="QmX-mx-xCp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MkQ-g0-zIF"/>
+                <constraint firstAttribute="trailing" secondItem="kus-UR-ek1" secondAttribute="trailing" id="ggV-Yq-7ZN"/>
+                <constraint firstAttribute="bottom" secondItem="QmX-mx-xCp" secondAttribute="bottom" id="nHV-yh-Vuj"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="225" y="334"/>
         </view>
     </objects>
 </document>
