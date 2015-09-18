@@ -59,7 +59,7 @@
     lable.scale = 1.0;
     self.bigScrollView.showsHorizontalScrollIndicator = NO;
     
-    
+#warning 天气
     UIButton *rightItem = [[UIButton alloc]init];
     self.rightItem = rightItem;
     UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
@@ -71,7 +71,7 @@
     rightItem.x = [UIScreen mainScreen].bounds.size.width - rightItem.width;
     NSLog(@"%@",NSStringFromCGRect(rightItem.frame));
     [rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
-    
+
 //    [self sendWeatherRequest];
 }
 
@@ -142,7 +142,7 @@
     
 }
 
-#pragma mark - ******************** scrollView代理方法
+#pragma mark - scrollView代理方法
 
 /** 滚动结束后调用（代码导致） */
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
