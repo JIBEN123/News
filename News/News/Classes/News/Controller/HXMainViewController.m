@@ -10,6 +10,14 @@
 #import "HXTitleLabel.h"
 #import "UIView+Extension.h"
 #import "HXTableViewController.h"
+#import "JLWeatherView.h"
+#import "JLWeatherDetailVC.h"
+#import "HXHTTPManager.h"
+#import "JLWeatherModel.h"
+#import "MJExtension.h"
+
+
+
 
 @interface HXMainViewController () <UIScrollViewDelegate>
 
@@ -19,12 +27,13 @@
 @property(nonatomic, strong) HXTitleLabel *oldTitleLable;
 @property (nonatomic, assign) CGFloat beginOffsetX;
 
+
 /** 新闻接口的数组 */
 @property(nonatomic, strong) NSArray *arrayLists;
 @property(nonatomic, assign, getter=isWeatherShow) BOOL weatherShow;
-//@property(nonatomic, strong) SXWeatherView *weatherView;
+@property(nonatomic, strong) JLWeatherView *weatherView;
 @property(nonatomic, strong) UIImageView *tran;
-//@property(nonatomic, strong) SXWeatherModel *weatherModel;
+@property(nonatomic, strong) JLWeatherModel *weatherModel;
 
 @property(nonatomic,strong)UIButton *rightItem;
 
@@ -59,27 +68,141 @@
     lable.scale = 1.0;
     self.bigScrollView.showsHorizontalScrollIndicator = NO;
     
-#warning 天气
+#pragma mark - 天气
+//    UIButton *rightItem = [[UIButton alloc]init];
+//    self.rightItem = rightItem;
+//    rightItem.width = 20;
+//    rightItem.height = 45;
+//    [rightItem addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+//    NSLog(@"%@",NSStringFromCGRect(rightItem.frame));
+//    [rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
+//
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightItem];
+    
     UIButton *rightItem = [[UIButton alloc]init];
     self.rightItem = rightItem;
-    rightItem.width = 20;
+    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
+    [win addSubview:rightItem];
+    rightItem.y = 20;
+    rightItem.width = 45;
     rightItem.height = 45;
     [rightItem addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    rightItem.x = [UIScreen mainScreen].bounds.size.width - rightItem.width;
     NSLog(@"%@",NSStringFromCGRect(rightItem.frame));
     [rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
+    
+    [self sendWeatherRequest];
+}
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightItem];
-//    [self sendWeatherRequest];
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (self.rightItem) {
+        
+        self.rightItem.hidden = NO;
+        [self.rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    self.rightItem.hidden = YES;
 }
 
-- (void)dealloc
-{
+- (void)rightItemClick{
     
+    if (self.isWeatherShow) {
+        
+        
+        self.weatherView.hidden = YES;
+        self.tran.hidden = YES;
+        [UIView animateWithDuration:0.1 animations:^{
+            self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, M_1_PI * 5);
+            
+        } completion:^(BOOL finished) {
+            [self.rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
+        }];
+    }else{
+        
+        [self.rightItem setImage:[UIImage imageNamed:@"223"] forState:UIControlStateNormal];
+        self.weatherView.hidden = NO;
+        self.tran.hidden = NO;
+        [self.weatherView addAnimate];
+        [UIView animateWithDuration:0.2 animations:^{
+            self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, -M_1_PI * 6);
+            
+        } completion:^(BOOL finished) {
+            
+            [UIView animateWithDuration:0.1 animations:^{
+                self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, M_1_PI );
+            }];
+        }];
+    }
+    self.weatherShow = !self.isWeatherShow;
+}
+
+- (void)sendWeatherRequest
+{
+    NSString *url = @"http://c.3g.163.com/nc/weather/5bm%2F6KW%2FfOahguaelw%3D%3D.html";
+    [[HXHTTPManager manager]GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        
+        JLWeatherModel *weatherModel = [JLWeatherModel objectWithKeyValues:responseObject];
+        self.weatherModel = weatherModel;
+        [self addWeather];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failure %@",error);
+    }];
+}
+
+- (void)addWeather{
+    JLWeatherView *weatherView = [JLWeatherView view];
+    weatherView.weatherModel = self.weatherModel;
+    self.weatherView = weatherView;
+    weatherView.alpha = 0.9;
+    UIWindow *win = [UIApplication sharedApplication].windows.firstObject;
+    [win addSubview:weatherView];
+    
+    UIImageView *tran = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"224"]];
+    self.tran = tran;
+    tran.width = 7;
+    tran.height = 7;
+    tran.y = 57;
+    tran.x = [UIScreen mainScreen].bounds.size.width - 33;
+    [win addSubview:tran];
+    
+    weatherView.frame = [UIScreen mainScreen].bounds;
+    weatherView.y = 64;
+    weatherView.height -= 64;
+    self.weatherView.hidden = YES;
+    self.tran.hidden = YES;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushWeatherDetail) name:@"pushWeatherDetail" object:nil];
+}
+
+// 点击天气图片会跳转到相应的详情页面
+- (void)pushWeatherDetail
+{
+    self.weatherShow = NO;
+    JLWeatherDetailVC *wdvc = [[JLWeatherDetailVC alloc]init];
+    wdvc.weatherModel = self.weatherModel;
+    [self.navigationController pushViewController:wdvc animated:YES];
+    [UIView animateWithDuration:0.1 animations:^{
+        self.weatherView.alpha = 0;
+    } completion:^(BOOL finished) {
+        self.weatherView.alpha = 0.9;
+        self.weatherView.hidden = YES;
+        self.tran.hidden = YES;
+    }];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

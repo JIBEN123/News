@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0453B4F31BAF8D73002786EA /* JLWeatherBgM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453B4E51BAF8D73002786EA /* JLWeatherBgM.m */; };
+		0453B4F41BAF8D73002786EA /* JLWeatherDetailM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453B4E71BAF8D73002786EA /* JLWeatherDetailM.m */; };
+		0453B4F51BAF8D73002786EA /* JLWeatherDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453B4E91BAF8D73002786EA /* JLWeatherDetailVC.m */; };
+		0453B4F61BAF8D73002786EA /* JLWeatherDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0453B4EA1BAF8D73002786EA /* JLWeatherDetailVC.xib */; };
+		0453B4F71BAF8D73002786EA /* JLWeatherItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453B4EC1BAF8D73002786EA /* JLWeatherItemView.m */; };
+		0453B4F81BAF8D73002786EA /* JLWeatherItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0453B4ED1BAF8D73002786EA /* JLWeatherItemView.xib */; };
+		0453B4F91BAF8D73002786EA /* JLWeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453B4EF1BAF8D73002786EA /* JLWeatherModel.m */; };
+		0453B4FA1BAF8D73002786EA /* JLWeatherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0453B4F11BAF8D73002786EA /* JLWeatherView.m */; };
+		0453B4FB1BAF8D73002786EA /* JLWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0453B4F21BAF8D73002786EA /* JLWeatherView.xib */; };
 		A9283ADA1BAC01FB002A6446 /* HXReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9283AD91BAC01FB002A6446 /* HXReplyViewController.m */; };
 		A9283ADD1BAC02CB002A6446 /* HXReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9283ADC1BAC02CB002A6446 /* HXReplyCell.m */; };
 		A9283AE01BAC04FF002A6446 /* HXReplyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9283ADF1BAC04FF002A6446 /* HXReplyHeader.m */; };
@@ -52,6 +61,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0453B4E41BAF8D73002786EA /* JLWeatherBgM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeatherBgM.h; sourceTree = "<group>"; };
+		0453B4E51BAF8D73002786EA /* JLWeatherBgM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeatherBgM.m; sourceTree = "<group>"; };
+		0453B4E61BAF8D73002786EA /* JLWeatherDetailM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeatherDetailM.h; sourceTree = "<group>"; };
+		0453B4E71BAF8D73002786EA /* JLWeatherDetailM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeatherDetailM.m; sourceTree = "<group>"; };
+		0453B4E81BAF8D73002786EA /* JLWeatherDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeatherDetailVC.h; sourceTree = "<group>"; };
+		0453B4E91BAF8D73002786EA /* JLWeatherDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeatherDetailVC.m; sourceTree = "<group>"; };
+		0453B4EA1BAF8D73002786EA /* JLWeatherDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLWeatherDetailVC.xib; sourceTree = "<group>"; };
+		0453B4EB1BAF8D73002786EA /* JLWeatherItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeatherItemView.h; sourceTree = "<group>"; };
+		0453B4EC1BAF8D73002786EA /* JLWeatherItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeatherItemView.m; sourceTree = "<group>"; };
+		0453B4ED1BAF8D73002786EA /* JLWeatherItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLWeatherItemView.xib; sourceTree = "<group>"; };
+		0453B4EE1BAF8D73002786EA /* JLWeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeatherModel.h; sourceTree = "<group>"; };
+		0453B4EF1BAF8D73002786EA /* JLWeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeatherModel.m; sourceTree = "<group>"; };
+		0453B4F01BAF8D73002786EA /* JLWeatherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeatherView.h; sourceTree = "<group>"; };
+		0453B4F11BAF8D73002786EA /* JLWeatherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeatherView.m; sourceTree = "<group>"; };
+		0453B4F21BAF8D73002786EA /* JLWeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JLWeatherView.xib; sourceTree = "<group>"; };
 		277C19C96A9B1DA27D05AA61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		50BC2499DB49A48ADA4106DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9283AD81BAC01FB002A6446 /* HXReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXReplyViewController.h; sourceTree = "<group>"; };
@@ -132,9 +156,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041EB68F1BAFA914006FD88A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		041EB6901BAFA91F006FD88A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0453B4EA1BAF8D73002786EA /* JLWeatherDetailVC.xib */,
+				0453B4E81BAF8D73002786EA /* JLWeatherDetailVC.h */,
+				0453B4E91BAF8D73002786EA /* JLWeatherDetailVC.m */,
+				0453B4ED1BAF8D73002786EA /* JLWeatherItemView.xib */,
+				0453B4EB1BAF8D73002786EA /* JLWeatherItemView.h */,
+				0453B4EC1BAF8D73002786EA /* JLWeatherItemView.m */,
+				0453B4F21BAF8D73002786EA /* JLWeatherView.xib */,
+				0453B4F01BAF8D73002786EA /* JLWeatherView.h */,
+				0453B4F11BAF8D73002786EA /* JLWeatherView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		041EB6911BAFA927006FD88A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0453B4EE1BAF8D73002786EA /* JLWeatherModel.h */,
+				0453B4EF1BAF8D73002786EA /* JLWeatherModel.m */,
+				0453B4E41BAF8D73002786EA /* JLWeatherBgM.h */,
+				0453B4E51BAF8D73002786EA /* JLWeatherBgM.m */,
+				0453B4E61BAF8D73002786EA /* JLWeatherDetailM.h */,
+				0453B4E71BAF8D73002786EA /* JLWeatherDetailM.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0453B4E31BAF8C4B002786EA /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				041EB6911BAFA927006FD88A /* Model */,
+				041EB6901BAFA91F006FD88A /* View */,
+				041EB68F1BAFA914006FD88A /* Controller */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
 		A976A1D51BAB11F500285CCF /* News */ = {
 			isa = PBXGroup;
 			children = (
+				0453B4E31BAF8C4B002786EA /* Weather */,
 				A9D8475B1BABF6BA00707C62 /* PhotoSet */,
 				A9D847441BABE4D600707C62 /* Detail */,
 				A9D8473A1BABE03C00707C62 /* Tools */,
@@ -489,9 +560,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D8475A1BABF5D400707C62 /* HYQiHei-50J.ttf in Resources */,
+				0453B4F81BAF8D73002786EA /* JLWeatherItemView.xib in Resources */,
 				A994CBA91BA6E65800A39A71 /* LaunchScreen.xib in Resources */,
 				A994CBA61BA6E65800A39A71 /* Images.xcassets in Resources */,
 				A9D846AA1BAB9E0D00707C62 /* News.storyboard in Resources */,
+				0453B4F61BAF8D73002786EA /* JLWeatherDetailVC.xib in Resources */,
+				0453B4FB1BAF8D73002786EA /* JLWeatherView.xib in Resources */,
 				A9D847581BABEA7000707C62 /* SXDetails.css in Resources */,
 				A976A1DD1BAB12BC00285CCF /* HXMainViewController.xib in Resources */,
 				A9D846A31BAB9B8E00707C62 /* NewsURLs.plist in Resources */,
@@ -554,20 +628,26 @@
 				A9283AE01BAC04FF002A6446 /* HXReplyHeader.m in Sources */,
 				A976A1DC1BAB12BC00285CCF /* HXMainViewController.m in Sources */,
 				A9D847531BABE73B00707C62 /* HXDetailImgModel.m in Sources */,
+				0453B4FA1BAF8D73002786EA /* JLWeatherView.m in Sources */,
+				0453B4F41BAF8D73002786EA /* JLWeatherDetailM.m in Sources */,
 				A9D8474A1BABE4F200707C62 /* HXDetailController.m in Sources */,
 				A9283ADD1BAC02CB002A6446 /* HXReplyCell.m in Sources */,
 				A994CBC51BA6E73B00A39A71 /* AppDelegate.m in Sources */,
 				A9D847501BABE6C300707C62 /* HXHTTPManager.m in Sources */,
 				A9D847391BABDEA700707C62 /* HXNewsModel.m in Sources */,
 				A9D847671BABF7DD00707C62 /* HXPhotosDetail.m in Sources */,
+				0453B4F91BAF8D73002786EA /* JLWeatherModel.m in Sources */,
 				A9D847611BABF6EF00707C62 /* HXPhotoSetController.m in Sources */,
 				A9283ADA1BAC01FB002A6446 /* HXReplyViewController.m in Sources */,
+				0453B4F31BAF8D73002786EA /* JLWeatherBgM.m in Sources */,
+				0453B4F51BAF8D73002786EA /* JLWeatherDetailVC.m in Sources */,
 				A976A1E01BAB12F200285CCF /* HXNavigationController.m in Sources */,
 				A9D8476A1BAC00A800707C62 /* MJExtensionConfig.m in Sources */,
 				A9D847561BABE7CB00707C62 /* HXReplyModel.m in Sources */,
 				A9D8474D1BABE5EE00707C62 /* HXDetailModel.m in Sources */,
 				A9D847641BABF7A900707C62 /* HXPhotoSet.m in Sources */,
 				A9D8473D1BABE05800707C62 /* HXNetworkTool.m in Sources */,
+				0453B4F71BAF8D73002786EA /* JLWeatherItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
