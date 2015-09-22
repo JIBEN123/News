@@ -92,6 +92,12 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.tabBarController.tabBar.hidden = YES;
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - ******************** 发请求
 - (void)sendRequestWithUrl:(NSString *)url
 {
