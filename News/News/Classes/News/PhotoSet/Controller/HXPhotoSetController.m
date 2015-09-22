@@ -145,7 +145,7 @@
     [self setContentWithIndex:0];
     
     NSString *countNum = [NSString stringWithFormat:@"1/%ld",photoSet.photos.count];
-    self.countLabel.text = countNum;
+    self.countLabel.attributedText = [self attrStringWithCount:countNum currentCount:1];
 }
 
 /** 设置页面imgView */
@@ -188,10 +188,25 @@
     
     // 添加文字
     NSString *countNum = [NSString stringWithFormat:@"%d/%ld",index+1,self.photoSet.photos.count];
-    self.countLabel.text = countNum;
+    
+    
+    self.countLabel.attributedText = [self attrStringWithCount:countNum currentCount:index + 1];
     
     // 添加内容
     [self setContentWithIndex:index];
+}
+
+- (NSAttributedString *)attrStringWithCount:(NSString *)countNum currentCount:(int)index
+{
+    NSUInteger len = 1;
+    if (index > 9) {
+        len = 2;
+    }
+    NSRange range = NSMakeRange(0, len);
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc] initWithString:countNum];
+    [attrStr setAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:18]} range:range];
+    
+    return attrStr;
 }
 
 /** 添加内容 */

@@ -15,6 +15,8 @@
             <string>HYQiHei-EZJ</string>
             <string>HYQiHei-EZJ</string>
             <string>HYQiHei-EZJ</string>
+            <string>HYQiHei-EZJ</string>
+            <string>HYQiHei-EZJ</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -394,7 +396,7 @@
                                     <constraint firstAttribute="width" constant="60" id="AK6-xu-TJp"/>
                                     <constraint firstAttribute="height" constant="28" id="HN9-tK-Cbr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HYQiHei-EZJ" family="HYQiHei" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -404,7 +406,7 @@
                                     <constraint firstAttribute="height" constant="43" id="UZh-Bq-J0b"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HYQiHei-EZJ" family="HYQiHei" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwR-F0-ehs" userLabel="底部view">
@@ -449,7 +451,7 @@
                                     <constraint firstAttribute="height" constant="28" id="fzj-26-Wpa"/>
                                     <constraint firstAttribute="width" constant="280" id="jKw-8x-vcE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

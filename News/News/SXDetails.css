@@ -14,11 +14,14 @@
     margin-top:7px;
     margin-bottom:7px;
     margin-left:10px;
-    
+    font-family: "HYQiHei";
+}
+
+.news_content {
+    font-family: "HYQiHei";
 }
 
 .img-parent {
     text-align:center;
     margin-bottom:10px;
-
 }

@@ -155,7 +155,8 @@
     [body appendFormat:@"<div class=\"title\">%@</div>",self.detailModel.title];
     [body appendFormat:@"<div class=\"time\">%@</div>",self.detailModel.ptime];
     if (self.detailModel.body != nil) {
-        [body appendString:self.detailModel.body];
+        [body appendFormat:@"<div class=\"news_content\">%@</div>",self.detailModel.body];
+//        [body appendString:self.detailModel.body];
     }
     // 遍历img
     for (HXDetailImgModel *detailImgModel in self.detailModel.img) {
