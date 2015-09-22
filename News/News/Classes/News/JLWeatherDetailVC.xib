@@ -15,7 +15,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SXWeatherDetailVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JLWeatherDetailVC">
             <connections>
                 <outlet property="airPMLbl" destination="Fbv-EP-zLO" id="osL-2N-JMl"/>
                 <outlet property="bgImg" destination="HEr-Fp-PfO" id="rVg-ly-zSF"/>
