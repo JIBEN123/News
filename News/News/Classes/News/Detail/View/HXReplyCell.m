@@ -22,7 +22,7 @@
 
 @implementation HXReplyCell
 
-/** set方法数据分发 */
+
 - (void)setReplyModel:(HXReplyModel *)replyModel
 {
     _replyModel = replyModel;

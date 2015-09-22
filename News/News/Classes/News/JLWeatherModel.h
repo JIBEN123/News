@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "JLWeatherDetailM.h"
 #import "JLWeatherBgM.h"
-//@class SXWeatherBgM;
-//@class SXWeatherDetailM;
 
 @interface JLWeatherModel : NSObject
 
