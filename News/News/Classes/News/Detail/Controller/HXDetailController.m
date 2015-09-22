@@ -73,9 +73,6 @@
         NSLog(@"failure %@",error);
     }];
     
-    //  http://comment.api.163.com/api/json/post/list/new/hot/ent2_bbs/AI1O4EEK00032DGD/0/10/10/2/2
-    
-    //    NSString *replyURL = self.news[self.index][@"replyUrl"];
     NSString *docID = self.newsModel.docid;
     
     
@@ -92,9 +89,6 @@
     
     NSLog(@"%@",self.news[1]);
     NSLog(@"%@----%@",self.newsModel.boardid,docID);
-    
-    // 假数据
-    //    NSString *url2 = @"http://comment.api.163.com/api/json/post/list/new/hot/photoview_bbs/PHOT1ODB009654GK/0/10/10/2/2";
     
     // 真数据
     NSString *url2 = [NSString stringWithFormat:@"http://comment.api.163.com/api/json/post/list/new/hot/%@/%@/0/10/10/2/2",self.newsModel.boardid,docID];

@@ -16,9 +16,6 @@
 #import "JLWeatherModel.h"
 #import "MJExtension.h"
 
-
-
-
 @interface HXMainViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *smallScrollView;
@@ -69,15 +66,6 @@
     self.bigScrollView.showsHorizontalScrollIndicator = NO;
     
 #pragma mark - 天气
-//    UIButton *rightItem = [[UIButton alloc]init];
-//    self.rightItem = rightItem;
-//    rightItem.width = 20;
-//    rightItem.height = 45;
-//    [rightItem addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
-//    NSLog(@"%@",NSStringFromCGRect(rightItem.frame));
-//    [rightItem setImage:[UIImage imageNamed:@"top_navigation_square"] forState:UIControlStateNormal];
-//
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightItem];
     
     UIButton *rightItem = [[UIButton alloc]init];
     self.rightItem = rightItem;

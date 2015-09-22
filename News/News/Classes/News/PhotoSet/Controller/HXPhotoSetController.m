@@ -82,7 +82,6 @@
     // 发请求
     [self sendRequestWithUrl:url];
     
-    //  http://comment.api.163.com/api/json/post/list/new/hot/tech_bbs/AI180I93000915BF/
     NSString *url2 = @"http://comment.api.163.com/api/json/post/list/new/hot/photoview_bbs/PHOT1ODB009654GK/0/10/10/2/2";
     [self sendRequestWithUrl2:url2];
 }
@@ -96,7 +95,7 @@
 - (void)sendRequestWithUrl:(NSString *)url
 {
     [[HXHTTPManager manager]GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //        SXPhotoSet *photoSet = [SXPhotoSet photoSetWith:responseObject];
+        
         HXPhotoSet *photoSet = [HXPhotoSet objectWithKeyValues:responseObject];
         self.photoSet = photoSet;
         
@@ -198,8 +197,6 @@
 - (void)setContentWithIndex:(int)index
 {
     HXPhotosDetail *photo = self.photoSet.photos[index];
-//    NSString *content = [self.photoSet.photos[index] note];
-//    NSString *contentTitle = [self.photoSet.photos[index] imgtitle];
     NSString *content = photo.note;
     NSString *contentTitle = photo.imgtitle;
     if (content.length != 0) {
@@ -212,7 +209,7 @@
 /** 懒加载添加图片！这里才是设置图片 */
 - (void)setImgWithIndex:(int)i
 {
-    // 这里不要问我为什么这么写因为尼玛就是有bug
+    
     UIImageView *photoImgView = nil;
     if (i == 0) {
         photoImgView = self.photoScrollView.subviews[i+2];

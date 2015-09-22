@@ -38,11 +38,6 @@
     return YES;
 }
 
-//- (void)setUrlString:(NSString *)urlString
-//{
-//    _urlString = urlString;
-//}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -96,7 +91,7 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@",error);
     }] resume];
-}// ------想把这里改成block来着
+}
 
 #pragma mark - /************************* tbv数据源方法 ***************************/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -137,7 +132,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 刚选中又马上取消选中，格子不变色
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UIViewController *vc = [[UIViewController alloc]init];

@@ -185,7 +185,6 @@
 
 }
 
-// ------为了实现和网易一样的动画 只能把代码写的这么蛋疼
 - (void)addAnimate{
     
     self.btn1.transform = CGAffineTransformMakeScale(0.2, 0.2);

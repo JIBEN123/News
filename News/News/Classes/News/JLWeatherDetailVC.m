@@ -75,12 +75,6 @@
     return self;  
 }
 
-//- (void)setWeatherModel:(SXWeatherModel *)weatherModel
-//{
-//    _weatherModel = weatherModel;
-//
-//}
-
 - (void)addWeather
 {
     
