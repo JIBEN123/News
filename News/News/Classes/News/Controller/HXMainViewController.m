@@ -125,6 +125,7 @@
         [self.rightItem setImage:[UIImage imageNamed:@"223"] forState:UIControlStateNormal];
         self.weatherView.hidden = NO;
         self.tran.hidden = NO;
+        // 底部六个按钮
         [self.weatherView addAnimate];
         [UIView animateWithDuration:0.2 animations:^{
             self.rightItem.transform = CGAffineTransformRotate(self.rightItem.transform, -M_1_PI * 6);
